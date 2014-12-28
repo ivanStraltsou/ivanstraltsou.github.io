@@ -49,8 +49,10 @@
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
               <h3 id="frontend-digest-44-code-wars-">FrontEnd Digest #44 code wars.</h3>
-<p>This doc contains comments for initial <a href="https://dl.dropboxusercontent.com/u/69142102/__permanent/jquery.customerName.bannerlist.js">code snippet</a></p>
-<p>   (c) Ivan Straltsou <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#105;&#x76;&#97;&#110;&#95;&#115;&#116;&#114;&#97;&#x6c;&#116;&#x73;&#x6f;&#x75;&#x40;&#x65;&#x70;&#97;&#109;&#x2e;&#x63;&#111;&#x6d;">&#105;&#x76;&#97;&#110;&#95;&#115;&#116;&#114;&#97;&#x6c;&#116;&#x73;&#x6f;&#x75;&#x40;&#x65;&#x70;&#97;&#109;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h4 id="-answer-https-github-com-ivanstraltsou-code-wars-blob-master-scripts-jquery-bannerlist-jquery-bannerlistnew-js-"><a href="https://github.com/ivanStraltsou/code-wars/blob/master/scripts/jquery.BannerList/jquery.bannerListNew.js">Answer</a></h4>
+<p>This doc contains comments for initial <a href="https://dl.dropboxusercontent.com/u/69142102/__permanent/jquery.customerName.bannerlist.js">code
+snippet</a>  (c) Ivan
+Straltsou <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x69;&#118;&#97;&#x6e;&#95;&#115;&#x74;&#114;&#97;&#108;&#x74;&#115;&#111;&#x75;&#x40;&#x65;&#112;&#x61;&#109;&#46;&#99;&#x6f;&#x6d;">&#x69;&#118;&#97;&#x6e;&#95;&#115;&#x74;&#114;&#97;&#108;&#x74;&#115;&#111;&#x75;&#x40;&#x65;&#112;&#x61;&#109;&#46;&#99;&#x6f;&#x6d;</a></p>
 
             </div>
             
@@ -78,7 +80,7 @@
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>	$.fn.BannerList = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(listKey, serviceRoot, onSuccess)</span> </span>{</pre></div></div>
+            <div class="content"><div class='highlight'><pre>  $.fn.BannerList = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(listKey, serviceRoot, onSuccess)</span> </span>{</pre></div></div>
             
         </li>
         
@@ -107,9 +109,9 @@
 </code></pre>
             </div>
             
-            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span> (serviceRoot.lastIndexOf(<span class="hljs-string">"/"</span>) != serviceRoot.length - <span class="hljs-number">1</span>) {
-			serviceRoot = serviceRoot + <span class="hljs-string">"/"</span>;
-		}</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (serviceRoot.lastIndexOf(<span class="hljs-string">"/"</span>) != serviceRoot.length - <span class="hljs-number">1</span>) {
+      serviceRoot = serviceRoot + <span class="hljs-string">"/"</span>;
+    }</pre></div></div>
             
         </li>
         
@@ -125,7 +127,7 @@
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">var</span> placeHolder = <span class="hljs-keyword">this</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> placeHolder = <span class="hljs-keyword">this</span>;</pre></div></div>
             
         </li>
         
@@ -140,7 +142,7 @@
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">var</span> list = $(<span class="hljs-string">'&lt;div id="loadingDiv"&gt;&lt;/div&gt;'</span>);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> list = $(<span class="hljs-string">'&lt;div id="loadingDiv"&gt;&lt;/div&gt;'</span>);</pre></div></div>
             
         </li>
         
@@ -156,10 +158,10 @@ It should just become data and translate it into markup.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>		$.ajax({
-			url: serviceRoot + <span class="hljs-string">"lists/"</span> + listKey,
-			dataType: <span class="hljs-string">"json"</span>,
-			cache: <span class="hljs-literal">false</span>,</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    $.ajax({
+      url: serviceRoot + <span class="hljs-string">"lists/"</span> + listKey,
+      dataType: <span class="hljs-string">"json"</span>,
+      cache: <span class="hljs-literal">false</span>,</pre></div></div>
             
         </li>
         
@@ -174,10 +176,10 @@ It should just become data and translate it into markup.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>			async: <span class="hljs-literal">true</span>,
-			success: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{
-				<span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
-				<span class="hljs-keyword">if</span> (data.ListItems != <span class="hljs-literal">null</span>) {</pre></div></div>
+            <div class="content"><div class='highlight'><pre>      async: <span class="hljs-literal">true</span>,
+      success: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> </span>{
+        <span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span> (data.ListItems != <span class="hljs-literal">null</span>) {</pre></div></div>
             
         </li>
         
@@ -192,8 +194,8 @@ It should just become data and translate it into markup.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>					$.each(data.ListItems, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(key, listItem)</span> </span>{
-						<span class="hljs-keyword">var</span> cssClass = <span class="hljs-string">'banner'</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>          $.each(data.ListItems, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(key, listItem)</span> </span>{
+            <span class="hljs-keyword">var</span> cssClass = <span class="hljs-string">'banner'</span>;</pre></div></div>
             
         </li>
         
@@ -208,10 +210,10 @@ It should just become data and translate it into markup.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>						<span class="hljs-keyword">var</span> cssId = <span class="hljs-string">''</span>;
-						<span class="hljs-keyword">var</span> cssStyle = <span class="hljs-string">''</span>;
-						<span class="hljs-keyword">var</span> imgScr = <span class="hljs-string">''</span>;
-						<span class="hljs-keyword">var</span> alt = <span class="hljs-string">' alt=""'</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">var</span> cssId = <span class="hljs-string">''</span>;
+            <span class="hljs-keyword">var</span> cssStyle = <span class="hljs-string">''</span>;
+            <span class="hljs-keyword">var</span> imgScr = <span class="hljs-string">''</span>;
+            <span class="hljs-keyword">var</span> alt = <span class="hljs-string">' alt=""'</span>;</pre></div></div>
             
         </li>
         
@@ -227,21 +229,21 @@ It should just become data and translate it into markup.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>						<span class="hljs-keyword">if</span> (counter == <span class="hljs-number">0</span>) {
-							cssId = <span class="hljs-string">'banner1'</span>;
-							cssStyle = <span class="hljs-string">'display: ;'</span>;
-							imgScr = <span class="hljs-string">'Customers/HiddenName/Content/images/panel/panel1-sml.jpg'</span>
-						}
-						<span class="hljs-keyword">if</span> (counter == <span class="hljs-number">1</span>) {
-							cssId = <span class="hljs-string">'banner2'</span>;
-							cssStyle = <span class="hljs-string">'display: none;'</span>;
-							imgScr = <span class="hljs-string">'Customers/HiddenName/Content/images/panel/panel2-sml.jpg'</span>
-						}
-						<span class="hljs-keyword">if</span> (counter == <span class="hljs-number">2</span>) {
-							cssId = <span class="hljs-string">'banner3'</span>;
-							cssStyle = <span class="hljs-string">'display: none;'</span>;
-							imgScr = <span class="hljs-string">'Customers/HiddenName/Content/images/panel/panel3-sml.jpg'</span>
-						}</pre></div></div>
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (counter == <span class="hljs-number">0</span>) {
+              cssId = <span class="hljs-string">'banner1'</span>;
+              cssStyle = <span class="hljs-string">'display: ;'</span>;
+              imgScr = <span class="hljs-string">'Customers/HiddenName/Content/images/panel/panel1-sml.jpg'</span>
+            }
+            <span class="hljs-keyword">if</span> (counter == <span class="hljs-number">1</span>) {
+              cssId = <span class="hljs-string">'banner2'</span>;
+              cssStyle = <span class="hljs-string">'display: none;'</span>;
+              imgScr = <span class="hljs-string">'Customers/HiddenName/Content/images/panel/panel2-sml.jpg'</span>
+            }
+            <span class="hljs-keyword">if</span> (counter == <span class="hljs-number">2</span>) {
+              cssId = <span class="hljs-string">'banner3'</span>;
+              cssStyle = <span class="hljs-string">'display: none;'</span>;
+              imgScr = <span class="hljs-string">'Customers/HiddenName/Content/images/panel/panel3-sml.jpg'</span>
+            }</pre></div></div>
             
         </li>
         
@@ -256,30 +258,30 @@ It should just become data and translate it into markup.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>						<span class="hljs-keyword">if</span> (cssClass != <span class="hljs-string">''</span>) { cssClass = <span class="hljs-string">'class="'</span> + cssClass + <span class="hljs-string">'" '</span>; }
-						<span class="hljs-keyword">if</span> (cssId != <span class="hljs-string">''</span>) { cssId = <span class="hljs-string">'id="'</span> + cssId + <span class="hljs-string">'" '</span>; }
-						<span class="hljs-keyword">if</span> (cssStyle != <span class="hljs-string">''</span>) { cssStyle = <span class="hljs-string">'style="'</span> + cssStyle + <span class="hljs-string">'" '</span>; }
+            <div class="content"><div class='highlight'><pre>            <span class="hljs-keyword">if</span> (cssClass != <span class="hljs-string">''</span>) { cssClass = <span class="hljs-string">'class="'</span> + cssClass + <span class="hljs-string">'" '</span>; }
+            <span class="hljs-keyword">if</span> (cssId != <span class="hljs-string">''</span>) { cssId = <span class="hljs-string">'id="'</span> + cssId + <span class="hljs-string">'" '</span>; }
+            <span class="hljs-keyword">if</span> (cssStyle != <span class="hljs-string">''</span>) { cssStyle = <span class="hljs-string">'style="'</span> + cssStyle + <span class="hljs-string">'" '</span>; }
 
-						<span class="hljs-keyword">if</span> (listItem.Properties != <span class="hljs-literal">null</span>) {
-							imgScr = listItem.Properties[<span class="hljs-number">0</span>].Value;
-						}
-						<span class="hljs-keyword">if</span> (imgScr != <span class="hljs-string">''</span>) { imgScr = <span class="hljs-string">'src="'</span> + imgScr + <span class="hljs-string">'" '</span>; }
+            <span class="hljs-keyword">if</span> (listItem.Properties != <span class="hljs-literal">null</span>) {
+              imgScr = listItem.Properties[<span class="hljs-number">0</span>].Value;
+            }
+            <span class="hljs-keyword">if</span> (imgScr != <span class="hljs-string">''</span>) { imgScr = <span class="hljs-string">'src="'</span> + imgScr + <span class="hljs-string">'" '</span>; }
 
-						<span class="hljs-keyword">var</span> itemContent = <span class="hljs-literal">null</span>;
-						<span class="hljs-keyword">if</span> (listItem.Link != <span class="hljs-literal">null</span>) {
-							itemContent = <span class="hljs-string">"&lt;a href='"</span> + listItem.Link + <span class="hljs-string">"'&gt; &lt;img "</span> + imgScr + alt + <span class="hljs-string">"/&gt;"</span> + <span class="hljs-string">"&lt;/a&gt;"</span>;
-						} <span class="hljs-keyword">else</span> {
-							itemContent = listItem.Name;
-						}
+            <span class="hljs-keyword">var</span> itemContent = <span class="hljs-literal">null</span>;
+            <span class="hljs-keyword">if</span> (listItem.Link != <span class="hljs-literal">null</span>) {
+              itemContent = <span class="hljs-string">"&lt;a href='"</span> + listItem.Link + <span class="hljs-string">"'&gt; &lt;img "</span> + imgScr + alt + <span class="hljs-string">"/&gt;"</span> + <span class="hljs-string">"&lt;/a&gt;"</span>;
+            } <span class="hljs-keyword">else</span> {
+              itemContent = listItem.Name;
+            }
 
-						list.before($(<span class="hljs-string">"&lt;div "</span> + cssId + cssClass + cssStyle + <span class="hljs-string">"&gt;"</span> + itemContent + <span class="hljs-string">"&lt;/div&gt;"</span>));
-						counter++;
-					});
-				}
-				<span class="hljs-keyword">if</span> (onSuccess &amp;&amp; <span class="hljs-keyword">typeof</span> onSuccess == <span class="hljs-string">'function'</span>) {
-					onSuccess(list);
-				}
-				placeHolder.prepend(list);</pre></div></div>
+            list.before($(<span class="hljs-string">"&lt;div "</span> + cssId + cssClass + cssStyle + <span class="hljs-string">"&gt;"</span> + itemContent + <span class="hljs-string">"&lt;/div&gt;"</span>));
+            counter++;
+          });
+        }
+        <span class="hljs-keyword">if</span> (onSuccess &amp;&amp; <span class="hljs-keyword">typeof</span> onSuccess == <span class="hljs-string">'function'</span>) {
+          onSuccess(list);
+        }
+        placeHolder.prepend(list);</pre></div></div>
             
         </li>
         
@@ -290,16 +292,17 @@ It should just become data and translate it into markup.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-13">&#182;</a>
               </div>
-              <p>This return statement will take no effect. It should be placed to the end of plugin-function to enable chaining.</p>
+              <p>This return statement will take no effect. It should be placed to the end of plugin-function to enable
+chaining.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
-			},
-			error: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(xhr, ajaxOptions, thrownError)</span> </span>{
-				GOD.Ajax.checkError(xhr, ajaxOptions, thrownError);
-			}
-		});</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+      },
+      error: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(xhr, ajaxOptions, thrownError)</span> </span>{
+        GOD.Ajax.checkError(xhr, ajaxOptions, thrownError);
+      }
+    });</pre></div></div>
             
         </li>
         
@@ -314,7 +317,7 @@ It should just become data and translate it into markup.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>	};
+            <div class="content"><div class='highlight'><pre>  };
 })(jQuery);</pre></div></div>
             
         </li>
