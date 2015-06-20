@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="curr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" media="all" />-->
+
+    <script src="js/vendor/angular.js"></script>
+    <script src="js/vendor/angular-sanitize.js"></script>
+    <script src="js/rc-currency.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-controller="controller">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">RC-Currency Test Page</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Model value</label>
+                    <div class="col-sm-5">
+                        <p class="form-control-static">
+                            <span id="model">{{ model }}</span>
+                        </p>
+                    </div>
+                </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">$rcCurrencyServive.format</label>
+                    <div class="col-sm-5">
+                        <p class="form-control-static">
+                            <span id="span">{{ rcCurrencyFormat }}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Input with binding and rcCurrency filter</label>
+                    <div class="col-sm-5">
+                        <p class="form-control-static">
+                            <span id="span" ng-bind-html="model | rcCurrency"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Input with binding and rcCurrency filter:true</label>
+                    <div class="col-sm-5">
+                        <p class="form-control-static">
+                            <span id="span" ng-bind-html="model | rcCurrency:true"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Input with model and rc-currency directive</label>
+                    <div class="col-sm-5">
+                        <input id="input" type="text" class="form-control" ng-model="model" rc-currency />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="change-model-input" class="col-sm-2 control-label">Change model</label>
+                    <div class="col-sm-5">
+                        <input autofocus id="change-model-input" type="text" class="form-control" ng-model="newModel" ng-keyup="$event.keyCode == 13 ? changeModel() : null" />
+                    </div>
+                    <div class="col-sm-5">
+                        <button id="change-model-button" class="btn btn-info" ng-click="changeModel()">Change model</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!--<label for="select" class="col-sm-2 control-label">Select</label>-->
+                    <!--<div class="col-sm-5">-->
+                        <!--<select class="form-control" ng-model="selected" ng-options="option as (option.value | rcCurrency) for option in options"></select>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-5">-->
+
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
