@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="curr">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="quizlib.css" media="all" />
+
+	<script src="quizlib.js"></script>
+</head>
+<body>
+<!-- Quiz Results -->
+<div id="quiz-result" class="card">
+	You Scored <span id="quiz-percent"></span>% - <span id="quiz-score"></span>/<span id="quiz-max-score"></span><br/>
+</div>
+
+<!-- Quiz Container -->
+<div id="quiz">
+	<!-- Question 1 -->
+	<div class="card quizlib-question">
+		<div class="quizlib-question-title">1. Введите октоторп</div>
+		<div class="quizlib-question-answers">
+			<input type="text" name="q1">
+		</div>
+	</div>
+
+	<!-- Question 2 -->
+	<div class="card quizlib-question">
+		<div class="quizlib-question-title">2. В каком случае, смотря на цифру 2 мы говорим “десять”?</div>
+		<div class="quizlib-question-answers">
+			<input type="text" name="q2">
+		</div>
+	</div>
+
+	<!-- Question 3 -->
+	<div class="card quizlib-question">
+		<div class="quizlib-question-title">3. В каких числах количество букв в названии совпадает с количеством цифр при написании?</div>
+		<div class="quizlib-question-answers">
+			<input type="text" name="q3">
+		</div>
+	</div>
+	<!-- Answer Button -->
+	<button type="button" id="showAnswersBtn">Check Answers</button>
+</div>
+<script src="quiz.js"></script>
+</body>
+
