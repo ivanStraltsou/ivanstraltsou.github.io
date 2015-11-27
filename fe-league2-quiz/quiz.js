@@ -60,13 +60,12 @@
   }
 
   window.onload = function() {
-    quiz = new Quiz('quiz', [
-      '#',
-      'Когда смотрим на часы',
-      'сто, миллион'
-    ]);
+    quiz = new Quiz('quiz', window._answers);
+    quiz.unansweredQuestionText = window._answers.text;
 
     document.getElementById('showAnswersBtn').addEventListener('click', showResults);
-
   };
 })();
+
+console.log('###############################################################################')
+console.log('Hey! What are you doing here ?\nIt will be too easy to find answers with developer tool. It\'s up to you are you going to answer on it or not. We are not collecting this information.')
