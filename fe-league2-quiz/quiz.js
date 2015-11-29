@@ -61,7 +61,7 @@
 
   window.onload = function() {
     quiz = new Quiz('quiz', window._answers);
-    quiz.unansweredQuestionText = window._answers.text;
+    quiz.unansweredQuestionText = window._answers.emptyErrorText;
 
     document.getElementById('showAnswersBtn').addEventListener('click', showResults);
   };

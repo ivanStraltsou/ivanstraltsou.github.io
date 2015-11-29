@@ -10,9 +10,9 @@
 </head>
 <body>
 <nav class="nav">
-	<a href="/fe-league2-quiz/index.html">Ramp up</a>
-	<a href="/fe-league2-quiz/index1.html"  class="current">Level 1</a>
-	<a href="/fe-league2-quiz/index2.html">Level 2</a>
+	<a href="/fe-league2-quiz/index.html">Разогрев</a>
+	<a href="/fe-league2-quiz/index1.html"  class="current">Тур 1</a>
+	<a href="/fe-league2-quiz/index2.html">Тур 2</a>
 </nav>
 
 <!-- Quiz Results -->
@@ -25,15 +25,34 @@
 <ol id="quiz">
 	<!-- Question 1 -->
 	<li class="card quizlib-question">
-		<div class="quizlib-question-title">Введите октоторп</div>
+		<div class="quizlib-question-title">
+			<div class="quizlib-question-title">
+				HTML:
+				<pre>&lt;div class=”wrapper”&gt;&lt;div class=”block”&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+
+				CSS:
+				<pre>
+.wrapper {
+  width: 200px;
+}
+
+.block {
+  width: 100%;
+  height: 100px;
+  padding: 5% 10%;
+}
+				</pre>
+				Какие значения в пикселях будут у свойств padding-top и padding-left элемента .block (пример: 40px 25px)?
+			</div>
+		</div>
 		<div class="quizlib-question-answers">
-			<input type="text" name="q1">
+			<input type="text" name="q1" autofocus>
 		</div>
 	</li>
 
 	<!-- Question 2 -->
 	<li class="card quizlib-question">
-		<div class="quizlib-question-title">В каком случае, смотря на цифру 2 мы говорим “десять”?</div>
+		<div class="quizlib-question-title">[,,,].join();<br>Что получится в результате выполнения этого кода?</div>
 		<div class="quizlib-question-answers">
 			<input type="text" name="q2">
 		</div>
@@ -41,7 +60,7 @@
 
 	<!-- Question 3 -->
 	<li class="card quizlib-question">
-		<div class="quizlib-question-title">В каких числах количество букв в названии совпадает с количеством цифр при написании?</div>
+		<div class="quizlib-question-title">console.log(parseInt(1/0, 19));<br>Что получится в результате выполнения этого кода?</div>
 		<div class="quizlib-question-answers">
 			<input type="text" name="q3">
 		</div>
@@ -49,48 +68,22 @@
 
 	<!-- Question 4 -->
 	<li class="card quizlib-question">
-		<div class="quizlib-question-title"><b>Это</b> используется в вёрстке. Может иметь префикс SVG/PNG или быть частью шрифта. Анаграмма этого - запрещенный психостимулятор. Назовите оба слова?</div>
+		<div class="quizlib-question-title">У какого браузера самая лучшая поддержка ECMAScript 6? (Подразумевается десктопный браузер стабильной версии)</div>
 		<div class="quizlib-question-answers">
 			<input type="text" name="q4">
 		</div>
 	</li>
 
-	<!-- Question 5 -->
-	<li class="card quizlib-question">
-		<div class="quizlib-question-title">Как переводится с английского слово grunt</div>
-		<div class="quizlib-question-answers">
-			<input type="text" name="q5">
-		</div>
-	</li>
-
-	<!-- Question 6 -->
-	<li class="card quizlib-question">
-		<div class="quizlib-question-title">Все знают, что означает <b>404</b>, а как расшифровывается статус <b>418</b> протокола HTTP?</div>
-		<div class="quizlib-question-answers">
-			<input type="text" name="q6">
-		</div>
-	</li>
-
-	<!-- Question 7 -->
-	<li class="card quizlib-question">
-		<div class="quizlib-question-title">Кто изображен на сайте www.nooooooooooooooo.com?</div>
-		<div class="quizlib-question-answers">
-			<input type="text" name="q7">
-		</div>
-	</li>
 	<!-- Answer Button -->
 	<button type="button" id="showAnswersBtn">Показать ответы</button>
 </ol>
 <script>
 
 	window._answers = [
-		'#',
-		'Когда смотрим на часы',
-		'сто, миллион',
-	    'иконка, кокаин',
-	    'хрюкать',
-	    'I\'m a teapot',
-	    'Дарт Вейдер'
+		'\u0031\u0030\u0070\u0078 \u0032\u0030\u0070\u0078',
+		'\u0022\u002c\u002c\u0022',
+		'\u0031\u0038',
+	    '\u0045\u0064\u0067\u0065\u002e \u0031\u0033\u002d\u044f \u0432\u0435\u0440\u0441\u0438\u044f \u0045\u0064\u0067\u0065 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0038\u0034\u0025 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0435\u0439  \u0045\u0043\u004d\u0041\u0053\u0063\u0072\u0069\u0070\u0074 \u0036'
 	];
 
 	window._answers.text = 'Пропущенный вопрос'
